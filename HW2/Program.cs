@@ -18,8 +18,12 @@ Console.WriteLine($"Second digit of your number is: " + res);
 */
 
 //Задача13. Написать программу, которая выводит третью цифру заданного числа или сообщает, что третьей цифры нет.
+//645 -> 5
+//78 -> третьей цифры нет
+//32679 -> 6 
 
 
+/*
 int ThirdNum(int number)
 {
     if(number < 100 )
@@ -48,7 +52,7 @@ int ThirdNum(int number)
 Console.WriteLine("Input your number: ");
 int new_num = Convert.ToInt32(Console.ReadLine());
 int res = ThirdNum(new_num);
-
+*/
 
 
 
@@ -58,7 +62,7 @@ int res = ThirdNum(new_num);
 // 7 -> да
 // 1 -> нет
 
-/*
+
 void CheckingTheDayOfTheWeek (int dayNumber) 
 {
   if (dayNumber == 6 || dayNumber == 7) 
@@ -76,4 +80,4 @@ Console.Write("Введите цифру, обозначающую день не
 int dayNumber = Convert.ToInt32(Console.ReadLine());
 
 CheckingTheDayOfTheWeek(dayNumber);
-*/
+
