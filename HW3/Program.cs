@@ -3,6 +3,7 @@
 // 23432 -> да
 // 12821 -> да
 
+//Вариант1
 /*
 Console.Write("Введите число: ");
 string number = Console.ReadLine();
@@ -23,6 +24,36 @@ if (number.Length == 5)
 
 else Console.WriteLine($"Введи правильное число");
 */
+
+//Вариант2
+
+Console.Write("Введите число: ");
+int number = Convert.ToInt32(Console.ReadLine());
+int num1 = number / 10000;
+int num2 = number / 1000 % 10;
+int num4 = (number % 100) / 10;
+int num5 = (number % 100) % 10;
+
+
+
+void CheckingNumber(int number)
+{
+  if (num1==num5 && num2==num4)
+  {
+    Console.WriteLine($"Ваше число: {number} - палиндром.");
+  }
+  else Console.WriteLine($"Ваше число: {number} - НЕ палиндром.");
+}
+
+if (number > 9999 && number < 100000)
+{
+  CheckingNumber(number);
+}
+
+else Console.WriteLine($"Введи правильное число");
+
+
+
 
 
 // Задача 21: Напишите программу, которая принимает на вход координаты двух точек и находит расстояние между ними в 3D пространстве.
@@ -63,6 +94,7 @@ Console.WriteLine($"Distance ABC is {dist:f2}");
 // 3 -> 1, 8, 27.
 // 5 -> 1, 8, 27, 64, 125.
 
+/*
 void Cube(int num)
 {
     int current = 1;
@@ -85,5 +117,5 @@ if(number >= 1)
 }
 
 else Console.WriteLine("imposible number!");
-
+*/
 
