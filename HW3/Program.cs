@@ -41,10 +41,17 @@ void CheckingNumber(int number)
   if (num1==num5 && num2==num4)
   {
     Console.WriteLine($"Ваше число: {number} - палиндром.");
+    Console.WriteLine($"{num1} равно {num5}");
+    Console.WriteLine($"{num2} равно {num4}");
+     
   }
-  else Console.WriteLine($"Ваше число: {number} - НЕ палиндром.");
+  else 
+  { 
+    Console.WriteLine($"Ваше число: {number} - НЕ палиндром.");
+    Console.WriteLine($"{num1} не равно {num5}");
+    Console.WriteLine($"{num2} не равно {num4}");
+  }
 }
-
 if (number > 9999 && number < 100000)
 {
   CheckingNumber(number);
