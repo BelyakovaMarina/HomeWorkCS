@@ -52,112 +52,34 @@ Console.WriteLine("Сумма цифр в числе: " + sumNumber);
 */
 
 // Задача 29. Написать программу, которая задаёт массив из 8 элементов и выводит их на экран.
-// 1, 2, 5, 7, 19 -> [1, 2, 5, 7, 19]
-// 6, 1, 33 -> [6, 1, 33]
+
 
 /*
-Console.Write("Введите ряд чисел через запятую: ");
-string seriesOfNumbers = Console.ReadLine();
-
-seriesOfNumbers = seriesOfNumbers + ",";    // дополнительня запятая для обозначения конца строки
-
-// функция удаления пробелов из строки 
-string RemovingSpaces (string series)
+int[] CreateArr(int size)
 {
-  string seriesNew = "";
-  for(int i = 0; i < series.Length; i++)
+  int[] array = new int[size];
+
+  for(int i = 0; i < array.Length; i ++)
   {
-    if (series[i] != ' ') 
-    {
-      seriesNew += series[i];
-    }
+    Console.Write("Input ");
+    array[i] = Convert.ToInt32(Console.ReadLine());
   }
-  return seriesNew;
+  return array;
 }
 
-//  функция  проверки на правильность ввода 
-void СheckNumber2 (int  series)
+void ShowArr(int[] array)
 {
-      if (series == '0'||series == '1'||series == '2'
-      ||series == '3'||series == '4'||series == '5'||series == '6'
-      ||series == '7'||series == '8'||series == '9'||series == ','
-      ||series == '-')
-      {
-
-      }
-        else Console.WriteLine($"Ошибка ввода  символа. Вводи цифры.");
-
+  for(int i = 0; i < array.Length; i ++)
+  {
+    Console.Write(array[i] + " ");
+  }
 }
 
-// функция  создания и заполнения массива из строки
-int[] ArrayOfNumbers(string seriesNew)
-{ 
-
-  int[] arrayOfNumbers = new int[1];    // инициализация массива из 1 элемента
-
-  int j =0;
-
-  for (int i = 0; i < seriesNew.Length; i++)
-  {
-    string seriesNew1 = "";
-
-    while (seriesNew[i] != ',' && i < seriesNew.Length)
-    {
-      seriesNew1 += seriesNew[i];
-      СheckNumber2(seriesNew[i]);
-      i++;
-    }
-    arrayOfNumbers[j] = Convert.ToInt32(seriesNew1);    // заполняет массив значениями из строки
-    if (i < seriesNew.Length-1)
-    {
-      arrayOfNumbers = arrayOfNumbers.Concat(new int[] {0}).ToArray();    // добавляет новый нулевой элемент в конец массива
-    }
-    j++;
-  }
-  return arrayOfNumbers;
-}
-
-// функция вывода массива на печать 
-void PrintArry(int[] coll)
-{
-  int count = coll.Length;
-  int index = 0;
-  Console.Write("[");
-  while(index < count)
-  {
-    Console.Write(coll[index]);
-    index++;
-    if (index < count)
-    {
-      Console.Write(", ");
-    }
-  }
-  Console.Write("]");
-} 
-
-
-string seriesNew = RemovingSpaces(seriesOfNumbers);
-
-int[] arrayOfNumbers =  ArrayOfNumbers(seriesNew);
-
-PrintArry(arrayOfNumbers);
+Console.Write("Введите длину массива ");
+int size = Convert.ToInt32(Console.ReadLine());
+int[] array = CreateArr(size);
+ShowArr(array);
 */
-//Вариант2
-int [] numbers = new int[8];
-Console.Write("[");
-
-for (int i = 0; i < numbers.Length; i++)
- {
-    numbers [i] = new Random().Next(0, 11);
-    Console.Write(" " + Method (i) + " ");
- }
-Console.Write("]");
-
-int Method (int a)
-{
-    return numbers[a];
-}
-
 
 
 
