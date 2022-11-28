@@ -55,7 +55,7 @@ Console.WriteLine("Сумма цифр в числе: " + sumNumber);
 // 1, 2, 5, 7, 19 -> [1, 2, 5, 7, 19]
 // 6, 1, 33 -> [6, 1, 33]
 
-
+/*
 Console.Write("Введите ряд чисел через запятую: ");
 string seriesOfNumbers = Console.ReadLine();
 
@@ -141,9 +141,22 @@ string seriesNew = RemovingSpaces(seriesOfNumbers);
 int[] arrayOfNumbers =  ArrayOfNumbers(seriesNew);
 
 PrintArry(arrayOfNumbers);
+*/
+//Вариант2
+int [] numbers = new int[8];
+Console.Write("[");
 
+for (int i = 0; i < numbers.Length; i++)
+ {
+    numbers [i] = new Random().Next(0, 11);
+    Console.Write(" " + Method (i) + " ");
+ }
+Console.Write("]");
 
-
+int Method (int a)
+{
+    return numbers[a];
+}
 
 
 
